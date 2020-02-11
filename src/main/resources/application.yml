@@ -1,0 +1,43 @@
+# Spring configuration
+spring:
+  # application properties
+  application:
+    name: Companion
+
+  # datasource properties
+  datasource:
+    url: 
+    username: 
+    password: 
+
+  # JPA and Hibernate properties
+  jpa:
+    database-platform: MYSQL
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show_sql: true
+        format_sql: true
+        ddl-auto: update
+    open-in-view: true
+    show-sql: true
+    generate-ddl: true
+
+  # Mail properties
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    username: 
+    password: 
+    properties:
+      mail:
+        smpt:
+          auth: true
+          starttls:
+            enable: true
+
+# Server configuration
+server:
+  port: 8075
+  servlet:
+    context-path: /companion
